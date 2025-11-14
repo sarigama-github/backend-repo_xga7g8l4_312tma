@@ -1,15 +1,9 @@
 INFO:     Will watch for changes in these directories: ['/home/workspace']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [159] using StatReload
-INFO:     Started server process [161]
+INFO:     Started reloader process [238] using StatReload
+INFO:     Started server process [240]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     172.20.0.1:53868 - "HEAD / HTTP/1.1" 405 Method Not Allowed
-WARNING:  StatReload detected changes in 'main.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [161]
-INFO:     Started server process [170]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
+INFO:     172.20.0.1:33848 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     172.20.0.1:37134 - "OPTIONS /api/generate HTTP/1.1" 200 OK
+INFO:     172.20.0.1:37136 - "POST /api/generate HTTP/1.1" 200 OK
