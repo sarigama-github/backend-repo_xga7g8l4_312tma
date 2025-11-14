@@ -12,7 +12,7 @@ Model name is converted to lowercase for the collection name:
 """
 
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Optional, List
 
 # Example schemas (replace with your own):
 
@@ -37,6 +37,20 @@ class Product(BaseModel):
     price: float = Field(..., ge=0, description="Price in dollars")
     category: str = Field(..., description="Product category")
     in_stock: bool = Field(True, description="Whether product is in stock")
+
+# Image Generator schemas
+class Generation(BaseModel):
+    """
+    Image generations collection schema
+    Collection name: "generation"
+    """
+    prompt: str = Field(..., description="User prompt that describes the image")
+    style: Optional[str] = Field(None, description="Optional style preset")
+    seed: Optional[int] = Field(None, description="Seed value for deterministic output")
+    image_data_url: str = Field(..., description="Generated image as a data URL (SVG base64)")
+    width: int = Field(1024, description="Image width in pixels")
+    height: int = Field(1024, description="Image height in pixels")
+    tags: Optional[List[str]] = Field(default=None, description="Optional tags extracted from prompt")
 
 # Add your own schemas here:
 # --------------------------------------------------
